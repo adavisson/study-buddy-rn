@@ -1,13 +1,39 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
 import { defaultView, defaultText } from '../styles/styles'
 import Card from '../components/Card'
 
 const HomeScreen = () => {
+  const subjects = [
+    {
+      title: 'General',
+    },
+    {
+      title: 'Javascript',
+    },
+    {
+      title: 'React/Redux',
+    },
+    {
+      title: 'Ruby',
+    },
+    {
+      title: 'Python',
+    },
+  ]
+  
   return (
     <View style={style.view}>
       <Text style={style.text}>Select a category</Text>
-      <Card />
+      <FlatList
+        keyExtractor={(subject) => subject.name}
+        data={subjects}
+        renderItem={({ item }) => {
+          return (
+            <Card title={item.title} />
+          )
+        }}
+      />
     </View>
   )
 }
@@ -19,6 +45,7 @@ const style = StyleSheet.create({
   text: {
     ...defaultText,
     paddingTop: 25,
+    paddingBottom: 25,
   }
 })
 

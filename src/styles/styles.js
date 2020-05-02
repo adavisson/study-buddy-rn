@@ -21,13 +21,16 @@ export const defaultTitle = {
 }
 
 export const defaultView = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
   backgroundColor: '#326771',
   height: '100%',
 }
 
 export const defaultText = {
   color: '#22333B',
-  alignSelf: 'center',
-  fontSize: 20,
+  fontSize: 25,
   fontWeight: 'bold',
 }

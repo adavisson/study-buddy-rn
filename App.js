@@ -10,7 +10,14 @@ const navigator = createStackNavigator(
     initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'Study Buddy',
-    },
+      headerStyle: {
+        backgroundColor: '#FFEAD0',
+      },
+      headerTintColor: '#326771',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }
   },
 )
 

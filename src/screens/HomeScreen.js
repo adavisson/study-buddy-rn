@@ -21,11 +21,13 @@ const HomeScreen = () => {
       title: 'Python',
     },
   ]
-  
+
   return (
     <View style={style.view}>
       <Text style={style.text}>Select a category</Text>
       <FlatList
+        style={{ width: '100%' }}
+        contentContainerStyle={style.cardContainer}
         keyExtractor={(subject) => subject.name}
         data={subjects}
         renderItem={({ item }) => {
@@ -46,6 +48,11 @@ const style = StyleSheet.create({
     ...defaultText,
     paddingTop: 25,
     paddingBottom: 25,
+  },
+  cardContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   }
 })
 

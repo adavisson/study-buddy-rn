@@ -13,7 +13,7 @@ const Card = ({ title }) => {
 const style = StyleSheet.create({
   card: {
     width: '75%',
-    height: 100,
+    height: 150,
     borderColor: '#22333B',
     borderWidth: 2,
     borderRadius: 10,
@@ -22,6 +22,8 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     justifyContent:'flex-start',
     alignItems: 'center',
+    alignSelf: 'center',
+    marginBottom: 25,
   },
   header: {
     ...defaultText,

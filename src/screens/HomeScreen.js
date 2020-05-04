@@ -6,18 +6,23 @@ import Card from '../components/Card'
 const HomeScreen = () => {
   const subjects = [
     {
+      id: '1',
       title: 'General',
     },
     {
+      id: '2',
       title: 'Javascript',
     },
     {
+      id: '3',
       title: 'React/Redux',
     },
     {
+      id: '4',
       title: 'Ruby',
     },
     {
+      id: '5',
       title: 'Python',
     },
   ]
@@ -32,7 +37,7 @@ const HomeScreen = () => {
         data={subjects}
         renderItem={({ item }) => {
           return (
-            <Card title={item.title} />
+            <Card title={item.title} id={item.id} />
           )
         }}
       />

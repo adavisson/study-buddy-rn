@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import { defaultText } from '../styles/styles'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const Card = ({ title }) => {
+const Card = ({ title, id }) => {
   return (
     <TouchableOpacity>
       <View style={style.card}>

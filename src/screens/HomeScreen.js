@@ -28,7 +28,7 @@ const HomeScreen = () => {
       <FlatList
         style={{ width: '100%' }}
         contentContainerStyle={style.cardContainer}
-        keyExtractor={(subject) => subject.name}
+        keyExtractor={(subject) => subject.title}
         data={subjects}
         renderItem={({ item }) => {
           return (

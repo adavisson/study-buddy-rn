@@ -1,12 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { defaultText } from '../styles/styles'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const Card = ({ title }) => {
   return (
-    <View style={style.card}>
-      <Text style={style.header}>{title}</Text>
-    </View>
+    <TouchableOpacity>
+      <View style={style.card}>
+        <Text style={style.header}>{title}</Text>
+      </View>
+    </TouchableOpacity>
   )
 }
 

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native'
 import { defaultView, defaultText } from '../styles/styles'
 import Card from '../components/Card'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const subjects = [
     {
       id: '1',
@@ -37,7 +37,7 @@ const HomeScreen = () => {
         data={subjects}
         renderItem={({ item }) => {
           return (
-            <Card title={item.title} id={item.id} />
+            <Card title={item.title} id={item.id} navigation={navigation} />
           )
         }}
       />

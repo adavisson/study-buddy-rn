@@ -8,6 +8,7 @@ const Card = ({ title, id, navigation }) => {
     <TouchableOpacity onPress={() => {
       navigation.navigate('Question', {
         subjectId: id,
+        title: title,
       })
     }}>
       <View style={styles.card}>

@@ -6,18 +6,21 @@ const QuestionCard = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false)
 
   return (
-    <View style={styles.card}>
-      <Text style={styles.text}>{question}</Text>
-      {!showAnswer ? (
-        <Button fontColor='#FFEAD0' color='#22333B' title="See Answer" onPress={() => setShowAnswer(true)} />
-      ) : null}
-      {showAnswer ? (
-        <>
-          <Text style={styles.answerText}>{answer}</Text>
-          <Button color='#22333B' title="Hide Answer" onPress={() => setShowAnswer(false)} />
-        </>
-      ) : null}
-    </View>
+    <>
+      <View style={styles.card}>
+        <Text style={styles.text}>{question}</Text>
+        {!showAnswer ? (
+          <Button fontColor='#FFEAD0' color='#22333B' title="See Answer" onPress={() => setShowAnswer(true)} />
+        ) : null}
+        {showAnswer ? (
+          <>
+            <Text style={styles.answerText}>{answer}</Text>
+            <Button color='#22333B' title="Hide Answer" onPress={() => setShowAnswer(false)} />
+          </>
+        ) : null}
+      </View>
+      <Button color='#22333B' title="Next Question" />
+    </>
   )
 }
 

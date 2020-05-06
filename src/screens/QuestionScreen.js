@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { defaultView, defaultText } from '../styles/styles'
 import Header from '../components/Header'
+import QuestionCard from '../components/QuestionCard'
 import { questions } from '../../assets/questions'
 
 const QuestionScreen = ({ navigation }) => {
@@ -13,7 +14,7 @@ const QuestionScreen = ({ navigation }) => {
   return (
     <View style={styles.view}>
       <Header title={subjectTitle} />
-      <Text style={styles.text}>Subject ID: {subjectId}</Text>
+      <QuestionCard question={activeQuestions[0].question} answer={activeQuestions[0].answer} />
     </View>
   )
 }

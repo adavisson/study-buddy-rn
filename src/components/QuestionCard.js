@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, Button, StyleSheet, RefreshControl } from 'react-native'
 import { defaultText } from '../styles/styles'
 
-const QuestionCard = ({ question, answer }) => {
+const QuestionCard = ({ question, answer, refresh }) => {
   const [showAnswer, setShowAnswer] = useState(false)
 
   return (
@@ -19,7 +19,7 @@ const QuestionCard = ({ question, answer }) => {
           </>
         ) : null}
       </View>
-      <Button color='#22333B' title="Next Question" />
+      <Button color='#22333B' title="Next Question" onPress={() => refresh()} />
     </>
   )
 }

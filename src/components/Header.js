@@ -4,13 +4,13 @@ import { defaultHeader, defaultTitle } from '../styles/styles';
 
 const Header = ({ title }) => {
   return (  
-    <View style={style.header}>
-      <Text style={style.title}>{title}</Text>
+    <View style={styles.header}>
+      <Text style={styles.title}>{title}</Text>
     </View>
   );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   header: {
     ...defaultHeader,
   },

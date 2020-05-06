@@ -28,11 +28,11 @@ const HomeScreen = ({ navigation }) => {
   ]
 
   return (
-    <View style={style.view}>
-      <Text style={style.text}>Select a category</Text>
+    <View style={styles.view}>
+      <Text style={styles.text}>Select a category</Text>
       <FlatList
         style={{ width: '100%' }}
-        contentContainerStyle={style.cardContainer}
+        contentContainerStyle={styles.cardContainer}
         keyExtractor={(subject) => subject.title}
         data={subjects}
         renderItem={({ item }) => {
@@ -45,7 +45,7 @@ const HomeScreen = ({ navigation }) => {
   )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   view: {
     ...defaultView,
   },

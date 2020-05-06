@@ -10,14 +10,14 @@ const Card = ({ title, id, navigation }) => {
         subjectId: id,
       })
     }}>
-      <View style={style.card}>
-        <Text style={style.header}>{title}</Text>
+      <View style={styles.card}>
+        <Text style={styles.header}>{title}</Text>
       </View>
     </TouchableOpacity>
   )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   card: {
     width: '75%',
     height: 150,

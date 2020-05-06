@@ -2,30 +2,9 @@ import React from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
 import { defaultView, defaultText } from '../styles/styles'
 import Card from '../components/Card'
+import { subjects } from '../../assets/questions'
 
 const HomeScreen = ({ navigation }) => {
-  const subjects = [
-    {
-      id: '1',
-      title: 'General',
-    },
-    {
-      id: '2',
-      title: 'Javascript',
-    },
-    {
-      id: '3',
-      title: 'React/Redux',
-    },
-    {
-      id: '4',
-      title: 'Ruby',
-    },
-    {
-      id: '5',
-      title: 'Python',
-    },
-  ]
 
   return (
     <View style={styles.view}>
@@ -33,11 +12,11 @@ const HomeScreen = ({ navigation }) => {
       <FlatList
         style={{ width: '100%' }}
         contentContainerStyle={styles.cardContainer}
-        keyExtractor={(subject) => subject.title}
+        keyExtractor={(subject) => subject.name}
         data={subjects}
         renderItem={({ item }) => {
           return (
-            <Card title={item.title} id={item.id} navigation={navigation} />
+            <Card title={item.name} id={item.id} navigation={navigation} />
           )
         }}
       />

@@ -6,7 +6,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 const Card = ({ title, id, navigation }) => {
   return (
     <TouchableOpacity onPress={() => {
-      navigation.navigate('Question')
+      navigation.navigate('Question', {
+        subjectId: id,
+      })
     }}>
       <View style={style.card}>
         <Text style={style.header}>{title}</Text>

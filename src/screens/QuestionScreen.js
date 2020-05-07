@@ -20,7 +20,7 @@ const QuestionScreen = ({ navigation }) => {
   },[])
 
   const exhausted = () => {
-    if (asked.length >= (activeQuestions.length - 1)){
+    if (asked.length >= activeQuestions.length){
       return true;
     } else {
       return false;
@@ -29,20 +29,21 @@ const QuestionScreen = ({ navigation }) => {
 
   const setIndex = () => {
     const index = Math.floor(Math.random() * activeQuestions.length)
-    if(!asked.includes(index)) {
-      setQuestion(activeQuestions[index].question);
-      setAnswer(activeQuestions[index].answer);
-      if (exhausted()) {
-        setAsked({})
-      } else {
+    if (exhausted()) {
+      setQuestion(activeQuestions[index].question)
+      setAnswer(activeQuestions[index].answer)
+      setAsked([index])
+    } else {
+      if(!asked.includes(index)) {
+        setQuestion(activeQuestions[index].question)
+        setAnswer(activeQuestions[index].answer)
         setAsked([
           ...asked,
           index
         ])
+      } else {
+        setIndex()
       }
-    }
-    else {
-      setIndex()
     }
   }
 

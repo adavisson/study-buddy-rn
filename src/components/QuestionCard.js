@@ -19,7 +19,10 @@ const QuestionCard = ({ question, answer, refresh }) => {
           </>
         ) : null}
       </View>
-      <Button color='#22333B' title="Next Question" onPress={() => refresh()} />
+      <Button color='#22333B' title="Next Question" onPress={() => {
+        setShowAnswer(false)
+        refresh()
+      }} />
     </>
   )
 }
